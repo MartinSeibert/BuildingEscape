@@ -19,9 +19,11 @@ void UPositionReporter::BeginPlay()
 {
 	Super::BeginPlay(); 
 
-	FString objectName = GetOwner()->GetName();
+	FString ObjectName = GetOwner()->GetName();
 
-	UE_LOG(LogTemp, Warning, TEXT("Position Reporter Begin Play - initiated from a %s"), *objectName);
+	FString ObjectPos = GetOwner()->GetTransform().GetLocation().ToString();
+
+	UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPos);
 	
 }
 

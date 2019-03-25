@@ -32,7 +32,7 @@ protected:
 
 private:
 	UPROPERTY(EditAnywhere)
-	float OpenANGLE = -90.f;
+	float OpenAngle = -90.f;
 
 	UPROPERTY(VisibleAnywhere)
 	AActor* ActorThatOpens;
@@ -44,6 +44,7 @@ private:
 	float DoorCloseDelay = 0.5f;
 
 	float LastDoorOpenTime;
+	AActor* Owner;
 	
 	
 };
